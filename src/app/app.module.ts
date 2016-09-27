@@ -5,11 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BindingsComponent } from './bindings/bindings.component';
+import { ArticleComponent } from './bindings/article.component';
+import { CustompropertyComponent } from './bindings/customproperty.component';
+import { EventBindingComponent } from './bindings/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BindingsComponent
+    BindingsComponent,
+    ArticleComponent,
+    CustompropertyComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,
