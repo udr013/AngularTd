@@ -1,19 +1,24 @@
 import {
   Component, OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked,
-  OnDestroy, SimpleChanges
+  OnDestroy, SimpleChanges, Input
 } from '@angular/core';
 
 @Component({
   selector: 'ud-lifecycle',
   template: `
-    <p>
+    
       <ng-content></ng-content>
-    </p>
+      <hr>
+      <p>{{binding}}</p>
+      <br>
+      <br>
+    
   `,
   styles: []
 })
 export class LifecycleComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
 
+  @Input() binding = 1000;
   constructor() { }
 
 
