@@ -8,6 +8,8 @@ import { BindingsComponent } from './bindings/bindings.component';
 import { ArticleComponent } from './bindings/article.component';
 import { CustompropertyComponent } from './bindings/customproperty.component';
 import { EventBindingComponent } from './bindings/event-binding.component';
+import { TwoWayBindingComponent } from './bindings/two-way-binding.component';
+import { LifecycleComponent } from './lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { EventBindingComponent } from './bindings/event-binding.component';
     BindingsComponent,
     ArticleComponent,
     CustompropertyComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TwoWayBindingComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
