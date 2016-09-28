@@ -6,11 +6,15 @@ import { Component } from '@angular/core';
 <!--   title is  set by databinding  String interpolation{{}}   and number interpolation, automatically casted to string      -->
             {{title}}{{number}}
           </h1>
-          <ud-bindings><h1>blabla</h1></ud-bindings>
-          <ud-article (secretmessage)="onclickSecret($event)"><h1>here is a h1 inside ud-article!</h1></ud-article>
+          title is  set by databinding  String interpolation{{}}   and number interpolation, automatically casted to string.
+          <br>
+          notice style gets only applied to the h1 of this template not the h1 in ud-bindings this is View Encapsulation
+          <ud-bindings><h2>To display 'local' tags inside a custom component tag</h2></ud-bindings>
+          <ud-article ><h2>we need to place an ng-content tag in the custom component template</h2></ud-article>
           <h2>{{value}}</h2>
           <h1>Event binding</h1>
-          <!--  with $event we can extract the data we emit in this method-->
+          <br>
+          with $event we can extract the data we emit in this method
           <ud-event-binding (secretmessage)="onclickSecret($event)"></ud-event-binding>
           <ud-two-way-binding></ud-two-way-binding>
           <ud-lifecycle *ngIf="!delete"><h1>Lifecycle example.</h1></ud-lifecycle>
